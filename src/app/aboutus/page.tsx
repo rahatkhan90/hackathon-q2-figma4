@@ -21,7 +21,7 @@ export default function About() {
     {
       name: "Michael Johnson",
       role: "Entrepreneur",
-      image: "t13.png",
+      image: "/t13.png",
       testimonial:
         "Working with them has been a fantastic experience. Their dedication to quality and customer satisfaction is unmatched.",
     },
@@ -41,8 +41,8 @@ export default function About() {
         {/* Header */}
         <header className="bg-gray-100">
           <div className="w-full py-8 bg-[#EEF2FF]">
-            <div className="container mx-auto px-5">
-              <h1 className="text-3xl font-extrabold text-[#1A2238]">About Us</h1>
+            <div className="container mx-auto px-4">
+              <h1 className="text-2xl md:text-3xl font-extrabold text-[#1A2238]">About Us</h1>
               <nav className="text-sm text-gray-500 mt-2">
                 <ol className="flex space-x-2">
                   <li>
@@ -59,9 +59,9 @@ export default function About() {
         </header>
 
         {/* About Section */}
-        <section className="flex flex-col lg:flex-row items-center justify-center px-6 lg:px-16 py-12">
+        <section className="flex flex-col lg:flex-row items-center justify-center px-4 md:px-16 py-8 md:py-12">
           {/* Image */}
-          <div className="lg:w-1/2 mb-8 lg:mb-0">
+          <div className="lg:w-1/2 mb-6 lg:mb-0">
             <Image
               src="/ab1.png"
               alt="E-commerce History"
@@ -73,24 +73,23 @@ export default function About() {
 
           {/* Content */}
           <div className="lg:w-1/2 lg:pl-10">
-            <h2 className="text-3xl font-bold text-[#1A2238]">
+            <h2 className="text-2xl md:text-3xl font-bold text-[#1A2238]">
               Discover Our E-commerce Journey
             </h2>
             <p className="mt-4 text-gray-700 leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-              malesuada, felis id aliquet bibendum, erat est sollicitudin orci,
-              at blandit eros purus non augue. Integer et velit mollis, feugiat
-              odio id, tempus ligula.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin malesuada,
+              felis id aliquet bibendum, erat est sollicitudin orci, at blandit eros purus
+              non augue. Integer et velit mollis, feugiat odio id, tempus ligula.
             </p>
-            <button className="mt-6 px-5 py-2 bg-blue-500 text-white rounded-lg shadow hover:bg-blue-600">
+            <button className="mt-6 px-4 py-2 bg-blue-500 text-white rounded-lg shadow hover:bg-blue-600">
               Contact Us
             </button>
           </div>
         </section>
 
         {/* Service Cards */}
-        <section className="container mx-auto px-6 lg:px-16 py-10">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <section className="container mx-auto px-4 md:px-16 py-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[1, 2, 3, 4].map((_, i) => (
               <div
                 key={i}
@@ -103,12 +102,9 @@ export default function About() {
                   height={65}
                   className="mb-4"
                 />
-                <h3 className="text-lg font-bold text-gray-800 mb-3">
-                  24/7 Support
-                </h3>
+                <h3 className="text-lg font-bold text-gray-800 mb-2">24/7 Support</h3>
                 <p className="text-gray-600 text-center">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa
-                  purus gravida.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa purus gravida.
                 </p>
               </div>
             ))}
@@ -117,8 +113,8 @@ export default function About() {
 
         {/* Testimonials */}
         <section className="py-12 bg-white">
-          <div className="container mx-auto px-6 lg:px-16">
-            <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">
+          <div className="container mx-auto px-4 md:px-16">
+            <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-8">
               Our Clients Say!
             </h2>
 
@@ -145,10 +141,10 @@ export default function About() {
               </div>
 
               {/* Testimonial Content */}
-              <h3 className="text-xl font-semibold text-gray-900">
+              <h3 className="text-lg md:text-xl font-semibold text-gray-900">
                 {testimonial.name}
               </h3>
-              <p className="text-sm text-gray-500 mb-4">
+              <p className="text-sm md:text-base text-gray-500 mb-4">
                 {testimonial.role}
               </p>
               <blockquote className="text-gray-600 italic">

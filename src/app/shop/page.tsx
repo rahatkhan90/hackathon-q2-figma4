@@ -107,6 +107,8 @@ const ProductGrid: React.FC = () => {
         <h1 className="text-center text-2xl md:text-3xl font-bold text-blue-900 mb-8">
           Our Products
         </h1>
+
+        {/* Grid for Product Display */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {products.map((product) => (
             <div key={product.id} className="text-center">
@@ -118,29 +120,31 @@ const ProductGrid: React.FC = () => {
                 <img
                   src={product.imgSrc}
                   alt={product.title}
-                  className="h-full w-full object-contain"
+                  className="h-full w-full object-cover rounded-lg"
                 />
               </div>
 
-              {/* Content Outside the Box */}
+              {/* Product Details */}
               <div className="mt-4">
-                <h2 className="text-md font-semibold text-[#151875]">
-                  {product.title}
-                </h2>
-                <p className="text-md  text-[#151875]">
-                  {product.price}
+                <h2 className="text-md font-semibold text-[#151875]">{product.title}</h2>
+                <p className="text-md text-[#151875]">
+                  {product.price}{" "}
                   <span className="line-through text-pink-500 px-2">$42.00</span>
                 </p>
+
+                {/* Color Swatches */}
                 <div className="flex justify-center gap-2 mt-2">
                   {product.colors.map((color, index) => (
                     <button
                       key={index}
-                      className="w-4 h-4 rounded-full border"
+                      className="w-6 h-6 rounded-full border-2"
                       style={{ backgroundColor: color.toLowerCase() }}
                     ></button>
                   ))}
                 </div>
-                <button className="text-[#151875] hover:text-pink-500 underline mt-4">
+
+                {/* Add to Cart Button */}
+                <button className="text-[#151875] hover:text-pink-500 underline mt-4 transform transition duration-300 hover:scale-105">
                   Add to Cart
                 </button>
               </div>

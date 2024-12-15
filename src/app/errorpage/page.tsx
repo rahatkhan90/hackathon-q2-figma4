@@ -5,35 +5,36 @@ export default function ErrorPage() {
   return (
     <>
       {/* Header Section */}
-      <div className="relative w-full h-[200px] bg-[#F6F5FF] text-left p-9 flex items-center justify-start mx-auto">
-        <div className="max-w-xl w-full ">
-          <h1 className="text-[#151875] font-bold text-2xl">404 Not Found</h1>
-          <p>
+      <header className="relative w-full h-[200px] bg-[#F6F5FF] flex items-center px-4 sm:px-6 md:px-9">
+        <div className="max-w-xl">
+          <h1 className="text-[#151875] font-bold text-2xl md:text-4xl">404 Not Found</h1>
+          <p className="text-gray-600">
             Home . Page . <span className="text-pink-500">404 Not Found</span>
           </p>
         </div>
-      </div>
+      </header>
 
       {/* Main Content Section */}
-      <div className="flex flex-col items-center justify-center min-h-screen text-center">
+      <main className="flex flex-col items-center justify-center min-h-screen px-4 text-center">
         {/* Centered Image */}
-        <div className="mb-6">
+        <div className="mb-8 w-full max-w-lg sm:max-w-xl">
           <Image
             src="/g2.png"
-            alt="404 error"
+            alt="404 Error"
             width={800}
             height={800}
-            className="mx-auto"
+            className="rounded-lg shadow-md"
+            priority
           />
         </div>
 
-        {/* Centralized Button */}
-        <Link href="/" className="items-center justify-center">
-          <button className="bg-pink-500 text-white text-[18px] font-bold px-6 py-2 rounded hover:bg-pink-600">
+        {/* Back to Home Button */}
+        <Link href="/" passHref>
+          <button className="bg-pink-500 text-white text-lg font-semibold px-6 py-3 rounded-md hover:bg-pink-600 transition-shadow shadow-md hover:shadow-lg">
             Back to Home
           </button>
         </Link>
-      </div>
+      </main>
     </>
   );
 }
