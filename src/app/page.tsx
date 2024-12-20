@@ -13,48 +13,65 @@ import LeatestBlog from "@/components/blogsection";
 
 export default function Home() {
   return (
-    <>
-    <div>
-    <HeroSection/>
-    </div>
+    <div className="overflow-x-hidden">
+      <div className="max-w-screen-xl mx-auto p-4">
+        <div className="space-y-8">
+          {/* Hero Section */}
+          <div className="flex justify-center w-full">
+            <HeroSection />
+          </div>
 
-    <div>
-    <ProductDisplay/>
-    </div>
+          {/* Product Display */}
+          <div className="flex justify-center w-full">
+            <ProductDisplay />
+          </div>
 
-    <div>
-      <LatestProduct/>
-    </div>
+          {/* Latest Product */}
+          <div className="flex justify-center w-full">
+            <LatestProduct />
+          </div>
 
-    <div>
-      <Supportpage/>
-    </div>
+          {/* Support Page */}
+          <div className="flex justify-center w-full">
+            <Supportpage />
+          </div>
 
-    <div><Uniquefeature/>
-    </div>
+          {/* Unique Feature */}
+          <div className="flex justify-center w-full">
+            <Uniquefeature />
+          </div>
 
-    <div>
-      <Trendingproducts/>
-    </div>
+          {/* Trending Products */}
+          <div className="flex justify-center w-full">
+            <Trendingproducts />
+          </div>
 
-    <div>
-      <Threecolumns/>
-    </div>
+          {/* Three Columns Section */}
+          <div className="flex justify-center w-full md:flex md:space-x-4">
+            <Threecolumns />
+          </div>
 
-    <div>
-      <DiscountItem/>
-    </div>
+          {/* Discount Items */}
+          <div className="flex justify-center w-full">
+            <DiscountItem />
+          </div>
 
-    <div>
-      <Circleitems/>
-    </div>
+          {/* Circle Items */}
+          <div className="flex justify-center w-full">
+            <Circleitems />
+          </div>
 
-    <div>
-      <SectionWithBackground/>
-    </div>
+          {/* Section with Background */}
+          <div className="flex justify-center w-full">
+            <SectionWithBackground />
+          </div>
 
-    <div>
-      <LeatestBlog/>    </div>
-    </>
+          {/* Latest Blog */}
+          <div className="flex justify-center w-full">
+            <LeatestBlog />
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
